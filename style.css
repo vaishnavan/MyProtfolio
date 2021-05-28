@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+@import url('https://fonts.googleapis.com/css?family=Anaheim');
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-image: linear-gradient(-3deg, #ffb3ff , #ccffff);
+}
+.nav_logo{
+    text-shadow: 0px 7px 3px rgba(0,0,0,0.5);
+    transform: rotate(-7deg);
+    font-family: 'Sofia';
+    font-size:1.6vh;
+    color: #8c1aff !important;
+}
+.nav_item a{
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Anaheim';
+    padding:5px 10px;
+}
+.nav_item a:hover{
+    background-image:linear-gradient(-17deg, #ffb3ff , #ccffff);
+    padding:5px 10px;
+}
+.overlay{
+    display: none;
+}
+
+
+@media (max-width:992px) {
+    .nav_item a{
+        margin: 0 10px;
+        padding:2px 5px;
+    }
+    .nav_item a:hover{
+        padding:2px 5px;
+    }
+}
+
+@media (max-width:600px) {
+    .navbar_main{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: 0.5s;
+    }
+    .nav_item a{
+        display: block;
+        text-align: center;
+    }
+    .nav_item{
+        margin: 20px auto;
+        display: none !important;
+    }
+    .nav_item{
+        height: 100vh;
+    }
+    .nav_item a{
+        margin: 30px 0;
+    }
+    .nav_item a:hover{
+        background-image:none;
+        padding:none;
+    }
+    .navbar_main .opening{
+        display: block;
+        text-shadow: 0px 7px 3px rgba(0,0,0,0.5);
+        transform: rotate(-7deg);
+        font-family: 'Sofia';
+        font-size:1.6vh;
+        color: #8c1aff !important;
+    }
+    .overlay{
+        display: block;
+    }
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image:linear-gradient(-17deg, #ffb3ff , #ccffff);
+    filter: opacity(0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(149, 49, 165);
+    display: block;
+    transition: 0.3s;
+    font-family: 'Anaheim';
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: rgb(149, 49, 165);
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
