@@ -82,21 +82,24 @@
 }
 
 .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
+    height: 400px;
+    width: 350px;
+    position: absolute;
     z-index: 1;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     background-image:linear-gradient(-17deg, #ffb3ff , #ccffff);
     filter: opacity(0.9);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0s;
+    transform:translate(-50%, -50%);
   }
+
+
   
   .overlay-content {
     position: relative;
-    top: 25%;
+    top: 10%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -104,7 +107,7 @@
   }
   
   .overlay a {
-    padding: 8px;
+    padding: 10px;
     text-decoration: none;
     font-size: 24px;
     color: rgb(149, 49, 165);
@@ -119,7 +122,7 @@
   
   .overlay .closebtn {
     position: absolute;
-    top: 20px;
+    top: 5px;
     right: 45px;
     font-size: 60px;
   }
